@@ -1,8 +1,8 @@
 class WorkSwiftKit < Formula
   desc "Interactive dev environment setup for multi-account workflows (git, SSH, zsh, Claude Code, AI tools)"
   homepage "https://github.com/Samirlb/Work-Swift-Kit"
-  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "7f6231d1ec9c39733e87536f9f98b0a3e95a6e04cc6728c09ea7354b2bca38e0"
+  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.4.4.tar.gz"
+  sha256 "f5d1be8c8b5dcf6e88e56b13dd1ad5d3db7e8896d51781509fbdc6b7d0dcf1ba"
   license "MIT"
 
   depends_on "gum"
