@@ -1,8 +1,8 @@
 class WorkSwiftKit < Formula
   desc "Interactive dev environment setup for multi-account workflows (git, SSH, zsh, Claude Code, AI tools)"
   homepage "https://github.com/Samirlb/Work-Swift-Kit"
-  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "4ac98227f3eec0656d07b151ff7b46861c1b6941ec64ebcf55890e8879d9d8f0"
+  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "ab4f38bba5eae256a611c18abc88d52d9514bd7c59c6b6aa6ddbee1e5ec498fa"
   license "MIT"
 
   depends_on "gum"
@@ -25,7 +25,7 @@ class WorkSwiftKit < Formula
       export WSK_DIR
       case "${1:-}" in
         ""|menu)                                exec bash "$WSK_DIR/install.sh" ;;
-        setup|full|accounts|terminals|relink|doctor|check|update|ai|ai-update|sync|fix-claude|fix-git)
+        setup|full|accounts|terminals|relink|doctor|check|update|ai|ai-update|sync|fix-claude|fix-git|codegraph-index)
                                                 exec bash "$WSK_DIR/install.sh" "$@" ;;
         install)                               exec bash "$WSK_DIR/install.sh" setup ;;  # back-compat
         -v|--version|version)                  exec bash "$WSK_DIR/install.sh" version ;;
@@ -39,6 +39,7 @@ class WorkSwiftKit < Formula
           echo "  ai            Install Claude Code, AI framework, codegraph and skills per account"
           echo "  ai-update     Update gentle-ai binary (brew) and sync configs per account"
           echo "  sync          Run gentle-ai sync for all accounts"
+          echo "  codegraph-index Build/refresh codegraph index for a project (default: cwd)"
           echo "  doctor        Check configuration (read-only health check)"
           echo "  update        Update the kit and upgrade packages"
           echo "  relink        Re-symlink dotfiles without re-collecting accounts"
