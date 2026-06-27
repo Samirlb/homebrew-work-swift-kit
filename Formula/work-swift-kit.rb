@@ -1,8 +1,8 @@
 class WorkSwiftKit < Formula
   desc "Interactive dev environment setup for multi-account workflows (git, SSH, zsh, Claude Code, AI tools)"
   homepage "https://github.com/Samirlb/Work-Swift-Kit"
-  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.4.4.tar.gz"
-  sha256 "9569c38ca19ce40b638fb45297034731b5b280e22182c636061cb61a75e9c057"
+  url "https://github.com/Samirlb/Work-Swift-Kit/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "e13ad4081d8036e827ab9012640a32a21d92cca84949ed04c8c076be8b77e2ef"
   license "MIT"
 
   depends_on "gum"
@@ -13,7 +13,7 @@ class WorkSwiftKit < Formula
   depends_on "sd"
   depends_on :macos
 
-  # Note: Node.js, pnpm, Claude Code, and codegraph are installed at runtime
+  # Note: Node.js, pnpm, Claude Code, and codebase-memory-mcp are installed at runtime
   # by `wsk ai` using the appropriate platform installer — they are not declared
   # as Homebrew depends_on so the Formula stays lightweight and cross-arch safe.
 
@@ -36,7 +36,7 @@ class WorkSwiftKit < Formula
           echo "  setup         Full setup: accounts, packages, terminals, AI dev tools, dotfiles"
           echo "  accounts      Configure accounts only"
           echo "  terminals     Install terminals/editors only"
-          echo "  ai            Install Claude Code, AI framework, codegraph and skills per account"
+          echo "  ai            Install Claude Code, AI framework, codebase-memory-mcp and skills per account"
           echo "  ai-update     Update gentle-ai binary (brew) and sync configs per account"
           echo "  sync          Run gentle-ai sync for all accounts"
           echo "  codegraph-index Build/refresh codegraph index for a project (default: cwd)"
@@ -64,7 +64,7 @@ class WorkSwiftKit < Formula
 
       Direct commands:
         wsk setup      # full setup (accounts, packages, terminals, AI dev tools, dotfiles)
-        wsk ai         # install Claude Code, AI framework, codegraph and skills per account
+        wsk ai         # install Claude Code, AI framework, codebase-memory-mcp and skills per account
         wsk ai-update  # update gentle-ai (brew) and sync configs per account
         wsk doctor     # check configuration
         wsk update     # update kit and tools
